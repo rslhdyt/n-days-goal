@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Exit immediately if a command exits with a non-zero status
+set -e
+
+# Build the project
+echo "Building the project..."
+pnpm build
+
+# Deploy to GitHub Pages
+echo "Deploying to GitHub Pages..."
+git add dist -f
+git commit -m "Deploy new version to GitHub Pages"
+git subtree push --prefix dist origin gh-pages
+
+echo "Deployment completed successfully!"

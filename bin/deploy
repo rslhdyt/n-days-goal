@@ -7,11 +7,13 @@ set -e
 echo "Building the project..."
 pnpm build
 
+cp CNAME dist/CNAME
+
 # Deploy to GitHub Pages
 echo "Deploying to GitHub Pages..."
 git add dist -f
 git commit -m "Deploy new version to GitHub Pages"
-# git subtree push --prefix dist origin gh-pages
+git subtree push --prefix dist origin gh-pages
 git push origin `git subtree split --prefix dist main`:gh-pages --force
 
 echo "Deployment completed successfully!"

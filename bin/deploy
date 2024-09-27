@@ -13,7 +13,8 @@ cp CNAME dist/CNAME
 echo "Deploying to GitHub Pages..."
 git add dist -f
 git commit -m "Deploy new version to GitHub Pages"
-git subtree push --prefix dist origin gh-pages
+
+# Force push the dist subtree to the gh-pages branch
 git push origin `git subtree split --prefix dist main`:gh-pages --force
 
 echo "Deployment completed successfully!"

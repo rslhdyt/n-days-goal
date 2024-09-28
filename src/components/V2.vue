@@ -110,7 +110,7 @@ const selectedProgress = ref(null)
 
 const fetchProgresses = async () => {
   try {
-    const response = await fetch('https://script.google.com/macros/s/AKfycbzOoW6-I9k5kqFlJifPlexBEOtXg1htPeOhqdlzt0_N71Xlbxqu9efzM55iFN3ADzpS/exec');
+    const response = await fetch('https://script.google.com/macros/s/AKfycby4wXLyvZXgb99iT7pUeWlNmORh85aDNkLLwf3ZtL3tYS_WbLiBKjA3ssnLStkbb-Rp/exec');
     const data = await response.json();
 
     const items = data.map(item => ({

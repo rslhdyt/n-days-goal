@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-gradient-to-br from-gray-100 to-slate-300">
+  <div class="bg-gradient-to-br from-gray-100 to-slate-300 p-3">
     <V2></V2>
   </div>
 </template>
